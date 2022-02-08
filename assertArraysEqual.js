@@ -1,4 +1,4 @@
-const assertEqual = function(actualArray, expectedArray) {
+const assertArraysEqual = function(actualArray, expectedArray) {
   let finalMessage = `✅✅✅ Assertion With Array Output Passed: ${actualArray} === ${expectedArray}`;
 
   if (actualArray.length !== expectedArray.length) {
@@ -14,8 +14,8 @@ const assertEqual = function(actualArray, expectedArray) {
   console.log(finalMessage);
 };
 
-assertEqual([1, 2, 3], [1, 2, 3]);
-assertEqual([1, 2, 3], [3, 2, 1]);
-assertEqual(["1", "2", "3"], ["1", "2", "3"]);
-assertEqual(["1", "2", "3"], ["1", "2", 3]);
-assertEqual(["1", "2", "3","4"], ["1", "2", "3"]);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2, 3], [3, 2, 1]);
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
+assertArraysEqual(["1", "2", "3","4"], ["1", "2", "3"]);
