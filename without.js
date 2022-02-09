@@ -1,19 +1,4 @@
-const assertArraysEqual = function(actualArray, expectedArray) {
-  let finalMessage = `✅✅✅ Assertion With Array Output Passed: ${actualArray} === ${expectedArray}`;
-
-  if (actualArray.length !== expectedArray.length) {
-    finalMessage = `🛑🛑🛑 Assertion With Array Output Failed: ${actualArray} !== ${expectedArray}`;
-  }
-
-  for (let i = 0; i < actualArray.length; i++) {
-    if (actualArray[i] !== expectedArray[i]) {
-      finalMessage = `🛑🛑🛑 Assertion With Array Output Failed: ${actualArray} !== ${expectedArray}`;
-    }
-  }  
-
-  console.log(finalMessage);
-};
-
+// EQARRAYS FUNCTION TO BE CALLED BY THE ASSERTEQUALARRAYS FUNCTION BELOW (FOR TESTING)
 const eqArrays = function(arrayOne, arrayTwo) {
   
   if (arrayOne.length !== arrayTwo.length) {
@@ -28,6 +13,18 @@ const eqArrays = function(arrayOne, arrayTwo) {
   
   return true;
 };
+
+// ASSERTARRAYSEQUAL FOR TESTING
+const assertArraysEqual = function(actualArray, expectedArray) {
+  let finalMessage = `✅✅✅ Assertion With Array Output Passed: ${actualArray} === ${expectedArray}`;
+
+  if (eqArrays(actualArray, expectedArray) === false) {
+    finalMessage = `🛑🛑🛑 Assertion With Array Output Failed: ${actualArray} !== ${expectedArray}`;
+  }
+  console.log(finalMessage);
+};
+
+// WITHOUT FUNCTION
 
 const without = function(source, itemsToRemove) {
   let newArray = [];
@@ -46,6 +43,8 @@ const without = function(source, itemsToRemove) {
 
   return newArray;
 };
+
+// TEST CASES
 
 assertArraysEqual(without([1,2,3,4],[2,4]), [1,3]);
 assertArraysEqual(without(["hello","goodbye","welcome","go away"],[2,4]), ["hello","goodbye","welcome","go away"]);

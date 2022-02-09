@@ -1,16 +1,26 @@
+// EQARRAYS FUNCTION TO BE CALLED BY THE ASSERTEQUALARRAYS FUNCTION BELOW
+const eqArrays = function(arrayOne, arrayTwo) {
+  
+  if (arrayOne.length !== arrayTwo.length) {
+    return false
+  }
+
+  for (let i = 0; i < arrayOne.length; i++) {
+    if (arrayOne[i] !== arrayTwo[i]) {
+      return false;        
+    }
+  }
+  
+  return true;
+};
+
+// ASSERTARRAYSEQUAL
 const assertArraysEqual = function(actualArray, expectedArray) {
   let finalMessage = `✅✅✅ Assertion With Array Output Passed: ${actualArray} === ${expectedArray}`;
 
-  if (actualArray.length !== expectedArray.length) {
+  if (eqArrays(actualArray, expectedArray) === false) {
     finalMessage = `🛑🛑🛑 Assertion With Array Output Failed: ${actualArray} !== ${expectedArray}`;
   }
-
-  for (let i = 0; i < actualArray.length; i++) {
-    if (actualArray[i] !== expectedArray[i]) {
-      finalMessage = `🛑🛑🛑 Assertion With Array Output Failed: ${actualArray} !== ${expectedArray}`;
-    }
-  }  
-
   console.log(finalMessage);
 };
 

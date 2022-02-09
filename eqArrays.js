@@ -1,3 +1,4 @@
+// ASSERTEQUAL FUNCTION FOR TESTING
 const assertEqual = function(actual, expected) {
   let finalMessage = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
 
@@ -23,6 +24,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   
   return true;
 }
+
+// TEST CASES
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);

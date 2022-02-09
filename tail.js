@@ -9,10 +9,14 @@ const assertEqual = function(actual, expected) {
   console.log(finalMessage);
 };
 
+
+// TAIL FUNCTION
 const tail = function(array) {
   const newArray = array.slice(1);
   return newArray;
 };
+
+// TEST CASES
 
 const arrayToTest = [1, 2, 3, 4];
 const testResultArray = tail(arrayToTest);
