@@ -1,8 +1,8 @@
 const middle = function(array) {
-  let newArray = []
+  let newArray = [];
   
   if (array.length < 3) {
-    newArray = []
+    newArray = [];
   } else if ((array.length > 2) && ((array.length % 2) != 0)) {
     newArray.push(array[Math.floor(array.length/2)]);
   } else {
