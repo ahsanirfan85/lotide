@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   let finalMessage = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
 

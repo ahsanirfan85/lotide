@@ -1,6 +1,6 @@
 {
   "name": "@ahsanirfan/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Practice Project from W01 for Lighthouse Labs",
   "main": "assertArraysEqual.js",
   "directories": {
